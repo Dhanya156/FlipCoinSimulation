@@ -49,6 +49,17 @@ do
                         fi
                 fi
         fi
+		difference=$((headCount-tailCount))
+                if [ $difference -eq 2 ]
+                then 
+			echo "When Tie then Head wins by two points"
+                	break
+                elif [ $difference -eq -2 ]
+                then 
+			echo "When tie then Tails wins by two points"
+                	break
+                fi
+
 done
 fi
 
